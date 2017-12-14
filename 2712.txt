@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+import re
+
+cond = re.compile('[A-Z]{3}-[0-9]{4}')
+qtd = int(input())
+
+seg = re.compile(r'1$|2$')
+ter = re.compile(r'3$|4$')
+qua = re.compile(r'5$|6$')
+qui = re.compile(r'7$|8$')
+sex = re.compile(r'9$|0$')
+
+for i in range(0, qtd):
+    entrada = input()
+    
+    if cond.match(entrada):
+        if len(entrada) <= 8:
+            if seg.search(entrada):
+                print('MONDAY')
+                
+            elif ter.search(entrada):
+                print('TUESDAY')
+            
+            elif qua.search(entrada):
+                print('WEDNESDAY')
+            
+            elif qui.search(entrada):
+                print('THURSDAY')
+            
+            elif sex.search(entrada):
+                print('FRIDAY')
+        else:
+            print('FAILURE')
+    else:
+        print('FAILURE')

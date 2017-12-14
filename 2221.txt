@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+
+instancias = int (input())
+
+for i in range(0, instancias):
+	bonus = int(input())
+	atkD, defD, levD = input().split()
+	atkD, defD, levD = int(atkD), int(defD), int(levD)
+
+	atkG, defG, levG = input().split()
+	atkG, defG, levG = int(atkG), int(defG), int(levG)
+
+	valorGolpeD = (atkD + defD) / 2
+	valorGolpeG = (atkG + defG) / 2
+
+	if levD % 2 == 0:
+		valorGolpeD += bonus
+	if levG % 2 == 0:
+		valorGolpeG += bonus
+	
+	if valorGolpeD > valorGolpeG:
+		print('Dabriel')
+	elif valorGolpeD == valorGolpeG:
+		print('Empate')
+	else:
+		print('Guarte') 

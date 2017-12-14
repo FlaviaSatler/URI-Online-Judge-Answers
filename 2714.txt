@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+quant = int(input())
+
+if not (1 <= quant <= 1000):
+	print("Quantidade inválida de RAs")
+	
+i = 0
+
+while i < quant:
+	dados = input().strip()
+	if dados == "":
+	     pass
+	
+	elif dados[:2] != "RA" or len(dados) != 20 or int(dados[2:]) == 0:
+             print("INVALID DATA")
+	
+	else:
+	     print(int(dados[2:]))
+	i += 1 	  	

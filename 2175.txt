@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+
+otavio, bruno, ian = input().split()
+
+otavio, bruno, ian = float(otavio), float(bruno), float(ian)
+
+
+if otavio < bruno and bruno < ian:
+    
+	print('Otavio')
+	
+elif bruno < ian and ian < otavio:
+    
+	print('Bruno')
+  
+elif ian < bruno and bruno < otavio:
+    
+	print('Ian')
+
+elif otavio < ian and ian < bruno:
+	print('Otavio')
+
+elif bruno < otavio and otavio < ian:
+    
+	print('Bruno')
+    
+elif ian < otavio and otavio < bruno:
+    
+	print('Ian')
+    
+else:
+    print('Empate')

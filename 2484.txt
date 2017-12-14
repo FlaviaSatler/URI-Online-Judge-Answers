@@ -1,0 +1,30 @@
+while True:
+    try:
+        palavra = input()
+        palavra = list(palavra)
+        tam = len(palavra)
+        esp = aux = str()
+        ult = palavra[0]
+        
+        for i in range(1, (len(palavra) * 2) - 1, 2):
+            palavra.insert(i, ' ')
+                
+        for i in range(0, len(palavra)):
+            aux += palavra[i]
+        
+        for i in range ((tam * 2) - 1, 0, -1):
+            if i % 2 != 1:
+                palavra[i] = ''
+                print('{}{}'.format(esp, aux).rstrip())
+                aux = str()
+                
+                for j in range(0, len(palavra)):
+                    aux += palavra[j]
+                    
+                if i != 0:
+                    esp += ' '
+                    
+        print('{}{}\n'.format(esp, ult))    
+        
+    except EOFError:
+        exit(0)
